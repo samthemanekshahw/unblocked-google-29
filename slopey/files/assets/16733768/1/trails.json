@@ -1,0 +1,59 @@
+{
+    "trails": [
+        {
+            "id": 0,
+            "texture": "shape_circle.png",
+            "colour1": {"r": 149, "g": 199,"b": 255},
+            "colour2": {"r": 149, "g": 199,"b": 255}
+        },
+        
+        {
+            "id": 1,
+            "texture": "shape_triangle2.png",
+            "colour1": {"r": 248, "g": 141,"b": 125},
+            "colour2": {"r": 248, "g": 141,"b": 125}
+        },
+        
+        {
+            "id": 2,
+            "texture": "shape_sparkle.png",
+            "colour1": {"r": 255, "g": 184,"b": 2},
+            "colour2": {"r": 255, "g": 184,"b": 2}
+        },
+        
+        {
+            "id": 3,
+            "texture": "shape_heart.png",
+            "colour1": {"r": 255, "g": 149,"b": 218},
+            "colour2": {"r": 255, "g": 149,"b": 218}
+        },
+        
+        {
+            "id": 4,
+            "texture": "shape_sparkle.png",
+            "colour1": {"r": 234, "g": 150,"b": 255},
+            "colour2": {"r": 54, "g": 255,"b": 205}
+        },
+        
+        {
+            "id": 5,
+            "texture": "shape_star.png",
+            "colour1": {"r": 46, "g": 167,"b": 246},
+            "colour2": {"r": 248, "g": 255,"b": 88}
+        },
+        
+        {
+            "id": 6,
+            "texture": "shape_triangle2.png",
+            "colour1": {"r": 110, "g": 200,"b": 255},
+            "colour2": {"r": 9, "g": 77,"b": 255}
+        },
+        
+        {
+            "id": 7,
+            "texture": "shape_snowflake.png",
+            "colour1": {"r": 169, "g": 205,"b": 255},
+            "colour2": {"r": 142, "g": 142,"b": 255}
+        }
+    ]
+}

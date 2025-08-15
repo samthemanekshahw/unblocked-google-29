@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8"/>
+<meta content="classroom6x.gitlab.io" name="website">
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="#382C2A" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
+<title>Slime Laboratory Unblocked - ClassRoom6x</title>
+<script>(() => {
+	var e = function(e) {
+			var n = RegExp("[?&]" + e + "=([^&]*)").exec(window.location.search);
+			return n && decodeURIComponent(n[1].replace(/\+/g, " "))
+		},
+		n = "kids" === e("tag"),
+		t = new(function() {
+			function e() {
+				var e = this;
+				this.queue = [], this.init = function(n) {
+					return void 0 === n && (n = {}), new Promise((function(t, o) {
+						e.enqueue("init", n, t, o)
+					}))
+				}, this.rewardedBreak = function() {
+					return new Promise((function(e) {
+						e(!1)
+					}))
+				}, this.noArguments = function(n) {
+					return function() {
+						e.enqueue(n)
+					}
+				}, this.oneArgument = function(n) {
+					return function(t) {
+						e.enqueue(n, t)
+					}
+				}, this.handleAutoResolvePromise = function() {
+					return new Promise((function(e) {
+						e()
+					}))
+				}, this.throwNotLoaded = function() {
+					console.debug("PokiSDK is not loaded yet. Not all methods are available.")
+				}
+			}
+			return e.prototype.enqueue = function(e, t, o, i) {
+				var r = {
+					fn: e,
+					options: t,
+					resolveFn: o,
+					rejectFn: i
+				};
+				n ? i && i() : this.queue.push(r)
+			}, e.prototype.dequeue = function() {
+				for (var e = function() {
+						var e = n.queue.shift(),
+							t = e,
+							o = t.fn,
+							i = t.options;
+						"function" == typeof window.PokiSDK[o] ? (null == e ? void 0 : e.resolveFn) || (null == e ? void 0 : e.rejectFn) ? window.PokiSDK[o](i).then((function() {
+							for (var n = [], t = 0; t < arguments.length; t++) n[t] = arguments[t];
+							"function" == typeof e.resolveFn && e.resolveFn.apply(e, n)
+						})).catch((function() {
+							for (var n = [], t = 0; t < arguments.length; t++) n[t] = arguments[t];
+							"function" == typeof e.rejectFn && e.rejectFn.apply(e, n)
+						})) : void 0 !== (null == e ? void 0 : e.fn) && window.PokiSDK[o](i) : console.error("Cannot execute " + e.fn)
+					}, n = this; this.queue.length > 0;) e()
+			}, e
+		}());
+	window.PokiSDK = {
+		init: t.init,
+		initWithVideoHB: t.init,
+		customEvent: t.throwNotLoaded,
+		commercialBreak: t.handleAutoResolvePromise,
+		rewardedBreak: t.rewardedBreak,
+		displayAd: t.throwNotLoaded,
+		destroyAd: t.throwNotLoaded,
+		getLeaderboard: t.handleAutoResolvePromise,
+		getSharableURL: function() {
+			return new Promise((function(e, n) {
+				return n()
+			}))
+		},
+		getURLParam: function(n) {
+			return e("gd" + n) || e(n) || ""
+		}
+	}, ["disableProgrammatic", "gameLoadingStart", "gameLoadingFinished", "gameInteractive", "roundStart", "roundEnd", "muteAd"].forEach((function(e) {
+		window.PokiSDK[e] = t.noArguments(e)
+	})), ["setDebug", "gameplayStart", "gameplayStop", "gameLoadingProgress", "happyTime", "setPlayerAge", "togglePlayerAdvertisingConsent", "logError", "sendHighscore", "setDebugTouchOverlayController"].forEach((function(e) {
+		window.PokiSDK[e] = t.oneArgument(e)
+	}));
+	var o, i = ((o = window.pokiSDKVersion) || (o = e("ab") || "v2.263.0"), "patch/poki-sdk-" + (n ? "kids" : "core") + "-" + o + ".js"),
+		r = document.createElement("script");
+	r.setAttribute("src", i), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"), r.onload = function() {
+		return t.dequeue()
+	}, document.head.appendChild(r)
+})();</script>
+<script>const supportDecoderApi="DecompressionStream"in self,isSWC=e=>67===e[0]&&87===e[1]&&83===e[2],outputSize=e=>new DataView(e.buffer).getUint32(4,!0);function Decoder(e,t=8){if(!supportDecoderApi)throw"Your browser not support DecompressionStream =(";const r=new self.DecompressionStream("deflate"),n=r.writable.getWriter(),i=r.readable.getReader(),o=new Uint8Array(e);let s,a=!1,c=!1;function l(){i.read().then((function r(n){const a=n.done,l=n.value;return l&&(o.set(l,t),t+=l.length),a||t>=e?(c=!0,s&&s(),void console.debug("[Loader] Decoder closed:",t)):i.read().then(r)}))}return{get buffer(){return o},write(e){n.ready.then((()=>{n.write(e),a||(a=!0,l())}))},readAll:()=>c?Promise.resolve(o):new Promise((e=>{s=()=>{e(o)}}))}}function Fetcher(e="",t=(e=>e)){let r,n=0,i=[];return t&&t(0),fetch(e).then((e=>(n=+e.headers.get("Content-Length"),r=e.body.getReader(),r.read()))).then((e=>{const o=e.value;console.debug("[Loader] Header:",String.fromCharCode.apply(null,o.slice(0,3).reverse()));let s,a=0;if(supportDecoderApi&&(67===(c=o)[0]&&87===c[1]&&83===c[2])){const e=outputSize(o),t=o.slice(0,8);t[0]=70,console.debug("[Loader] SWC size:",outputSize(o)),s=Decoder(e,8),s.buffer.set(t),s.write(o.slice(8))}else i.push(o);var c;return a+=o.length,t&&t(Math.min(1,a/n)),r.read().then((function e(o){if(o.done){if(s)return s.readAll();{let e=new Uint8Array(a),t=0;return i.forEach((r=>{e.set(r,t),t+=r.length})),e}}const c=o.value;return a+=c.length,t&&t(Math.min(1,a/n)),s?s.write(c):i.push(c),r.read().then(e)}))}))}var Loader=function(){function e(e,r=(e=>e)){const n=e.path.indexOf(".js")>-1;if(!n&&supportDecoderApi)return Fetcher(e.path,r).then((t=>({meta:e.meta||{},name:e.name,path:e.path,resourceType:e.resourceType,data:t.buffer,type:"swf"})));const i=new XMLHttpRequest;return i.addEventListener("progress",(t=>{const n="gzip"===i.getAllResponseHeaders("content-encoding"),o=t.total||+i.getAllResponseHeaders("content-length")||e.size*(n?.25:1);r(o?Math.min(1,t.loaded/o):1)})),i.open("GET",e.path,!0),i.responseType=n?"text":"arraybuffer",new Promise(((o,s)=>{i.addEventListener("error",s),i.addEventListener("load",(()=>{if(r(1),n){const e=new Blob([i.response],{type:"text/javascript"});t(URL.createObjectURL(e)).then((()=>o(void 0)))}else o({meta:e.meta||{},name:e.name,path:e.path,resourceType:e.resourceType,data:i.response,type:n?"js":"swf"})})),i.send()}))}function t(e,t){const r=document.querySelector("head"),n=document.createElement("script");return new Promise(((i,o)=>{Object.assign(n,{type:"text/javascript",async:!0,src:e.path||e,onload:()=>{t&&t(1),i(n)},onerror:o,onreadystatechange:e=>{n.readyState}}),r.appendChild(n)}))}function r(e,t,r){const n={callback:e,childs:t?t.slice():void 0,value:0,weight:r||1,get report(){return function(e){if(this.childs){let e=0,t=0;this.childs.forEach((r=>{e+=r.weight||1,t+=r.value||0})),this.value=t/e}else this.value=e*this.weight;this.callback&&this.callback(this.value)}.bind(this)}};return t&&t.forEach((e=>{e.callback=n.report})),n}let n,i,o,s,a;function c(e){if(!e)throw new Error("Config is required");i=e;const t=document.querySelector("#splash__image"),r=document.querySelector("#progress__root"),c=document.querySelector("#progress__line");o=t,s=r;const l=e.progress;l.rect=l.rect||[0,.9,1,.2],Object.assign(t.style,{backgroundImage:`url(${e.splash})`,visibility:"visible"}),Object.assign(r.style,{background:l.back,left:100*l.rect[0]+"%",top:100*l.rect[1]+"%",width:100*l.rect[2]+"%",height:100*l.rect[3]+"%"}),Object.assign(c.style,{background:l.line}),n=e=>{if("tb"===l.direction)Object.assign(c.style,{height:100*e+"%",width:"100%"});else Object.assign(c.style,{height:"100%",width:100*e+"%"})},a=()=>{let r="string"==typeof e.x?parseFloat(e.x.replace("%",""))/100*window.innerWidth:e.x,n="string"==typeof e.y?parseFloat(e.y.replace("%",""))/100*window.innerHeight:e.y,i="string"==typeof e.w?parseFloat(e.w.replace("%",""))/100*window.innerWidth:e.w,o="string"==typeof e.h?parseFloat(e.h.replace("%",""))/100*window.innerHeight:e.h;r||(r=0),n||(n=0),i||(i=window.innerWidth),o||(o=window.innerHeight);const s=Math.min(o/e.height,i/e.width),a=Math.ceil(e.width*s),c=Math.ceil(e.height*s),l=r+(i-a)/2,d=n+(o-c)/2;Object.assign(t.style,{width:`${a}px`,height:`${c}px`,left:`${l}px`,top:`${d}px`})},window.addEventListener("resize",a),a()}return window.setStageDimensions=function(e,t,r,n){i.x=e,i.y=t,i.w=r,i.h=n,window.AVMPlayerPoki&&window.AVMPlayerPoki.setStageDimensions(e,t,r,n),a&&a()},{init:c,runGame:function(l=(e=>e),d=(e=>e)){i||c();let h=Array.isArray(i.runtime)?h:[i.runtime];h=h.map((e=>({path:e.path||e,size:e.size||0})));const p=i.binary,u=r(null,null,4),g=r((e=>{console.log("AVM Load",e)}),null,i.progressParserWeigth?i.progressParserWeigth:.001);r((function(e){n(e),l(e)}),[u,g]),function(n,i,o=(e=>e),s){const a=n.length,c=i.length,l=n.concat(i),d=Array.from({length:a+c},(()=>r()));let h;return r(o,d),s?(h=i.map(((t,r)=>e(t,d[r].report))),h=h.concat(n.map(((e,r)=>t(e,d[r+c].report))))):h=l.map(((t,r)=>e(t,d[r].report))),Promise.all(h).then((e=>e.filter((e=>e&&"swf"===e.type))))}(h,p,u.report,i.debug).then((e=>{const t=window.startPokiGame;if(!t)throw"Could not find a 'startPokiGame' method";i.files=e,t(i)})),Object.assign(window,{updatePokiProgressBar:g.report,pokiGameParseComplete:e=>{if(d(e),i.start){Object.assign(s.style,{visibility:"hidden",opacity:0}),Object.assign(o.style,{backgroundImage:`url(${i.start})`});let t=r=>{if(window.removeEventListener("click",t),Object.assign(o.style,{visibility:"hidden",opacity:0}),!e)throw"PokiPlayer did not send a callback for starting game";e(),window.setTimeout((()=>{window.removeEventListener("resize",a),a=null}),500)};window.addEventListener("click",t)}else Object.assign(o.style,{visibility:"hidden",opacity:0}),window.setTimeout((()=>{window.removeEventListener("resize",a),a=null}),500)}})}}}();</script>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            outline: none
+        }
+
+        html,
+        body,
+        #container {
+            margin: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+        #splash {
+            position: absolute;
+            visibility: hidden;
+            z-index: 10;
+        }
+
+        #splash__image {
+            position: absolute;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("assets/slime_laboratory.jpg");
+            visibility: visible;
+            transition: all 0.5s;
+            z-index: 10;
+        }
+
+        #progress__root {
+            position: absolute;
+        }
+
+        #progress__line {
+            width: 0;
+            height: 100%;
+            transition: all 0.5s;
+        }
+    </style>
+</meta></meta></head>
+<body style="overflow:hidden;">
+<div id="splash__image">
+<div id="progress__root">
+<div id="progress__line"></div>
+</div>
+</div>
+<script>
+        window.addEventListener("load", () => {
+
+
+
+      PokiSDK.init().then(
+        () => {
+          // successfully initialized
+          onPokiInitComplete(false);
+        }
+      ).catch(
+        () => {
+          // successfully initialized but the user has adblock
+          onPokiInitComplete(true);
+        }
+      );
+
+      let config;
+
+      
+config = {
+    "title": "Slime Laboratory",
+    "filename": "SlimeLaboratory_sdk",
+    "stageScaleMode": "showAll",
+    "splash": "assets/slime_laboratory.jpg",
+    "width": 1031,
+    "height": 580,
+    "progress": {
+        "direction": "lr",
+        "back": "#000000",
+        "line": "#86ff00",
+        "rect": [
+            0.25,
+            0.65,
+            0.5,
+            0.01
+        ]
+    },
+    "pokiSDK": true,
+    "debugPoki": true,
+    "showFPS": false,
+    "debug": false,
+    "start": null,
+    "x": 0,
+    "y": 0,
+    "w": "100%",
+    "h": "100%",
+    "stageAlign": null,
+    "progressParserWeigth": 1,
+    "skipFramesOfScene": null,
+    "buttonPokiSDKActions": null,
+    "retryButtonIDS": null,
+    "retryButtonAction": null,
+    "actionOnStop": null,
+    "actionWhenRetryButtonEncountered": null,
+    "debugpoki": false,
+    "filenameNoSdk": "SlimeLaboratory",
+    "binary": [
+        {
+            "name": "fonts.swf",
+            "path": "assets/fonts.swf",
+            "size": 30506
+        },
+        {
+            "name": "SlimeLaboratory_sdk",
+            "path": "assets/SlimeLaboratory_sdk.swf",
+            "size": 1464701,
+            "resourceType": "GAME"
+        }
+    ],
+    "runtime": "js/Neutronized.js"
+};
+
+      
+      PokiSDK.setDebug(config.debugPoki);
+
+      Loader.init(config);
+
+      let onPokiInitComplete = (adBlocked) => {
+
+        PokiSDK.adBlocked = adBlocked;
+        PokiSDK.gameLoadingStart();
+
+        Loader.runGame((fill) => {
+          PokiSDK.gameLoadingProgress({
+            percentageDone: fill,
+            kbLoaded: 0,
+            kbTotal: 0,
+            fileNameLoaded: "",
+            filesLoaded: 0,
+            filesTotal: 0
+          });
+        }, (instance) => {
+          PokiSDK.gameLoadingFinished();
+        })
+      }
+    })
+
+    </script>
+</body>

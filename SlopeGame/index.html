@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta charset="utf-8"/>
+<style>html {
+    height: 100%;
+    width: 100%;
+    background-color: #1d292c;
+}
+body {
+    margin: 0;
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #1d292c;
+    font-family: Helvetica, arial, sans-serif;
+    position: relative;
+    width: 100%;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+#application-canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#application-canvas.fill-mode-NONE {
+    margin: auto;
+}
+#application-canvas.fill-mode-KEEP_ASPECT {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+#application-canvas.fill-mode-FILL_WINDOW {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+canvas:focus {
+    outline: none;
+}
+</style>
+<style>{
+  "manifest_version": 3,
+  "name": "Image Overlay Center",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+</style>
+<style></style>
+<title>Slope Game Unblocked - ubg235 GC</title>
+<!-- ---------------- API Snippet ---------------- -->
+<script>
+        window.famobi_gameID = "ramp"; // the actual GAMEID is added to the final version by Famobi
+        window.famobi_gameJS = [
+            "playcanvas-stable.min.js",
+            "settings__.js",
+            "modules__.js",
+            "start__.js",
+            "loading__.js"
+        ];
+        (function (document, url, fgJS, firstJS) {
+            fgJS = document.createElement('script');
+            firstJS = document.getElementsByTagName('script')[0];
+            fgJS.src = url + encodeURIComponent(document.location.href);
+            firstJS.parentNode.insertBefore(fgJS, firstJS);
+        })(document, 'js/start.js?e=');
+    </script>
+<!-- ---------------- API Snippet end ------------- -->
+</head>
+<body style="overflow:hidden;">
+<script>function loadGoogleAnalytics(id) {
+    // Google tag (gtag.js)
+    var firstScript= document.getElementsByTagName("script")[0];
+    newScript= document.createElement("script");
+    newScript.async= "";
+    newScript.src= "https://www.googletagmanager.com/gtag/js?id="+ id;
+    firstScript.parentNode.insertBefore(newScript, firstScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', id);
+}
+
+window.addEventListener("load", function() {
+    if (navigator.webdriver) {
+      console.log('Bot Browser');
+      loadGoogleAnalytics("G-LE1ZGTPC77");
+
+    } else {
+      console.log('Human Browser');
+      loadGoogleAnalytics("G-E7D3EVY6HR");
+    }
+});
+</script>
+<script>function loadJS(FILE_URL, async = true) {
+  let scriptEle = document.createElement("script");
+
+  scriptEle.setAttribute("src", FILE_URL);
+  scriptEle.setAttribute("type", "text/javascript");
+  scriptEle.setAttribute("async", async);
+
+  document.body.appendChild(scriptEle);
+
+  // Success
+  scriptEle.addEventListener("load", () => {
+    console.log("ubg235 served!");
+  });
+
+   // Error
+  scriptEle.addEventListener("error", () => {
+    console.log("ubg235 error!");
+  });
+}
+
+window.addEventListener("load", function () {
+  loadJS("https://www.ubg235.com/js/ubg235_server_v1_0.js", true);
+});
+</script>
+</body>
+</html>

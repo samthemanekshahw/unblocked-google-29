@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Slope Game Unblocked - ClassRoom6x</title>
+<meta content="slope.png" property="og:image">
+<link href="TemplateData/icon16.png" rel="shortcut icon"/>
+<style>html,body { padding: 0; margin: 0; overflow: hidden; }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%);background: #fff;padding: 10px; }
+#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-canvas { background: #231F20;}
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: url('progress-bar-empty-dark.png') no-repeat center }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+#unity-footer { position: relative }
+.unity-mobile #unity-footer { display: none }
+#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-mobile-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+</style>
+<style>
+	  #unity-canvas {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+    }
+      body{
+        background: url("bg.jpg");
+      }
+      a:-webkit-any-link {
+          color: -webkit-link;
+          cursor: pointer;
+          text-decoration: underline;
+      }
+      a{
+        cursor: pointer;
+      }
+      h1 {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    background: #fff;
+    width: 100%;
+    top: 0;
+    margin: 0;
+}
+    </style>
+<meta content="classroom6x.gitlab.io" name="website">
+<script src="/cloak.js" type="text/javascript"></script>
+</meta></meta></head>
+<body style="overflow:hidden;">
+<canvas id="unity-canvas"></canvas>
+<div id="unity-loading-bar">
+<div id="unity-logo"></div>
+<div id="unity-progress-bar-empty">
+<div id="unity-progress-bar-full"></div>
+</div>
+</div>
+<script>
+		const maxPixelRatioMobile = 2.0;
+		const maxPixelRatioDesktop = 1.5;
+
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		var maxDevicePixelRatio = isMobile? maxPixelRatioMobile: maxPixelRatioDesktop;
+		var pixelRatio = Math.min(window.devicePixelRatio, maxDevicePixelRatio);
+		console.log(pixelRatio);
+		var buildUrl = "Build";
+		var loaderUrl = buildUrl + "/2020.3.23f1.loader.js";
+		var config = {
+			dataUrl: buildUrl + "/SlopeBuild.data",
+			frameworkUrl: buildUrl + "/SlopeBuild.framework.js",
+			codeUrl: buildUrl + "/SlopeBuild.wasm",
+			streamingAssetsUrl: "StreamingAssets",
+			companyName: "Y8",
+			productName: "Slope",
+			productVersion: "1.2",
+			//devicePixelRatio: pixelRatio,
+			//matchWebGLToCanvasSize: true
+		};
+		
+		var container = document.querySelector("#unity-container");
+		var canvas = document.querySelector("#unity-canvas");
+		var loadingBar = document.querySelector("#unity-loading-bar");
+		var progressBarFull = document.querySelector("#unity-progress-bar-full");
+		
+		console.log(screen.width);
+		canvas.style.width = screen.width;
+        canvas.style.height = screen.height;
+		loadingBar.style.display = "block";
+		var myGameInstance = null;
+		var script = document.createElement("script");
+		script.src = loaderUrl;
+		script.onload = () => {
+			createUnityInstance(canvas, config, (progress) => {
+			  progressBarFull.style.width = 100 * progress + "%";
+			}).then((unityInstance) => {
+			  myGameInstance = unityInstance;
+			  loadingBar.style.display = "none";
+			  /*fullscreenButton.onclick = () => {
+				unityInstance.SetFullscreen(1);
+			  };*/
+			}).catch((message) => {
+			  alert(message);
+			});
+		};
+		document.body.appendChild(script);
+    </script>
+<script>window.adsbygoogle = window.adsbygoogle || [];
+const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
+adConfig({
+    preloadAdBreaks: 'off',
+    sound: 'on', // This game has sound
+    onReady: () => {
+        console.log("ready");
+    }, // Called when API has initialised and adBreak() is ready
+});
+function showNextAd()
+{
+    console.log("showNextAd")
+    adBreak({
+        type: 'next', // ad shows at start of next level
+        name: 'next-game',
+        beforeAd: () => {            
+            console.log("beforeAd")
+            passBeforeAdData()
+        }, // You may also want to mute thegame's sound.
+        afterAd: () => {
+            console.log("afterAd")
+        }, // resume the game flow.
+        adBreakDone: (placementInfo) => {
+            console.log("adBreak complete ");
+            adBreakDoneData()
+            console.log(placementInfo.breakType);
+            console.log(placementInfo.breakName);
+            console.log(placementInfo.breakFormat);
+            console.log(placementInfo.breakStatus);
+        },
+    });
+}
+
+function passBeforeAdData()
+{
+    myGameInstance.SendMessage('Canvas', 'pauseGame');
+}
+
+function adBreakDoneData()
+{
+    myGameInstance.SendMessage('Canvas', 'resumeGame');
+}</script>
+</body>
+</html>

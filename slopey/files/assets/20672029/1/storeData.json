@@ -1,0 +1,224 @@
+{
+    "Balls": [
+        {
+            "id": "White",
+            "image": "white.png",
+            "price": 200
+        },
+        {
+            "id": "Yellow",
+            "image": "yellow.png",
+            "price": 200
+        },
+        {
+            "id": "Red",
+            "image": "red.png",
+            "price": 200
+        },
+        {
+            "id": "Blue",
+            "image": "blue.png",
+            "price": 200
+        },
+        {
+            "id": "Green",
+            "image": "green.png",
+            "price": 200
+        },
+        {
+            "id": "Purple",
+            "image": "purple.png",
+            "price": 200
+        },
+        {
+            "id": "Football",
+            "image": "football.png",
+            "price": 200
+        },
+        {
+            "id": "Football2",
+            "image": "football2.png",
+            "price": 200
+        },
+       
+        {
+            "id": "BasketballM",
+            "image": "basketball.png",
+            "price": 200
+        },
+        {
+            "id": "Netball",
+            "image": "netball.png",
+            "price": 200
+        },
+        {
+            "id": "Tennis",
+            "image": "tennis.png",
+            "price": 200
+        },
+        
+        {
+            "id": "Pufferfish",
+            "image": "pufferfish.png",
+            "price": 200
+        },
+         
+        {
+            "id": "Slimemold",
+            "image": "slime.png",
+            "price": 200
+        },
+        
+        {
+            "id": "Rainbow",
+            "image": "rainbow.png",
+            "price": 200
+        },
+        {
+            "id": "Meatball",
+            "image": "meatball.png",
+            "price": 200
+        },
+        
+        {
+            "id": "OuterEdges",
+            "image": "outeredges.png",
+            "price": 200
+        },
+        {
+            "id": "Wood",
+            "image": "wood.png",
+            "price": 200
+        },
+        {
+            "id": "TechBall",
+            "image": "tech.png",
+            "price": 200
+        },
+        {
+            "id": "RedEye",
+            "image": "eye_red.png",
+            "price": 200
+        },
+        {
+            "id": "BlueEye",
+            "image": "blue_eye.png",
+            "price": 200
+        },
+        {
+            "id": "Lava",
+            "image": "lava.png",
+            "price": 200
+        },
+        {
+            "id": "Burger",
+            "image": "burger.png",
+            "price": 200
+        },
+        {
+            "id": "Candy",
+            "image": "candy.png",
+            "price": 200
+        },
+        {
+            "id": "CatToy",
+            "image": "cat_toy.png",
+            "price": 200
+        },
+        {
+            "id": "Cheese",
+            "image": "cheese.png",
+            "price": 200
+        },
+        {
+            "id": "Diamond",
+            "image": "diamond.png",
+            "price": 200
+        },
+        {
+            "id": "Holo",
+            "image": "holo.png",
+            "price": 200
+        },
+        {
+            "id": "Hedgehog",
+            "image": "hedgehog.png",
+            "price": 200
+        }
+        
+    ],
+  "Trails": [   
+        {
+            "id": 0,
+            "image": "trail_base.png",
+            "price": 200,
+            "texture": "shape_circle.png",
+            "colour1": {"r": 255, "g": 255,"b": 255},
+            "colour2": {"r": 255, "g": 255,"b": 255}
+        },
+        {
+            "id": 1,
+            "image": "trail_circle.png",
+            "price": 200,
+            "texture": "shape_circle.png",
+            "colour1": {"r": 149, "g": 199,"b": 255},
+            "colour2": {"r": 149, "g": 199,"b": 255}
+        },
+        {
+            "id": 2,
+            "image": "trail_fire.png",
+            "price": 200,
+            "texture": "shape_triangle2.png",
+            "colour1": {"r": 248, "g": 141,"b": 125},
+            "colour2": {"r": 248, "g": 141,"b": 125}
+        },
+        {
+            "id": 3,
+            "image": "trail_gold.png",
+            "price": 200,
+            "texture": "shape_sparkle.png",
+            "colour1": {"r": 255, "g": 184,"b": 2},
+            "colour2": {"r": 255, "g": 184,"b": 2}
+        },
+        {
+            "id": 4,
+            "image": "trail_heart.png",
+            "price": 100,
+            "texture": "shape_heart.png",
+            "colour1": {"r": 255, "g": 117,"b": 179},
+            "colour2": {"r": 255, "g": 228,"b": 255}
+        },
+        {
+            "id": 5,
+            "image": "trail_magic.png",
+            "price": 200,
+            "texture": "shape_sparkle.png",
+            "colour1": {"r": 234, "g": 150,"b": 255},
+            "colour2": {"r": 54, "g": 255,"b": 205}
+        },
+        {
+            "id": 6,
+            "image": "trail_stars.png",
+            "price": 200,
+            "texture": "shape_star.png",
+            "colour1": {"r": 225, "g": 251,"b": 140},
+            "colour2": {"r": 184, "g": 135,"b": 7}
+        },
+        {
+            "id": 7,
+            "image": "trail_triangles.png",
+            "price": 200,
+            "texture": "shape_triangle2.png",
+            "colour1": {"r": 82, "g": 181,"b": 255},
+            "colour2": {"r": 156, "g": 255,"b": 221}
+        },
+        {
+            "id": 8,
+            "image": "trail_winter.png",
+            "price": 200,
+            "texture": "shape_snowflake.png",
+            "colour1": {"r": 240, "g": 255,"b": 255},
+            "colour2": {"r": 106, "g": 191,"b": 255}
+        }
+    ]
+}

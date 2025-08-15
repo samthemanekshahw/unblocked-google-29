@@ -1,0 +1,45 @@
+{
+  "name": "slope-racing-3d",
+  "version": "8",
+  "symbols": "6",
+  "origin": "unity",
+  "engineVersion": "2021.1",
+  "runtime": {
+    "aspect": [
+      1.3,
+      3.5
+    ],
+    "orientation": "landscape",
+    "res": [
+      {
+        "glob": "emscripten/**",
+        "root": "emscripten/"
+      }
+    ]
+  },
+  "tinyLoaderScript": "tiny-loader.js",
+  "sdkScripts": [
+    "sdk.js",
+    "gamepix-adapter.js"
+  ],
+  "sizes": {
+    "br/bin.data._.js.br": 845841,
+    "br/bin.data.js.br": 3645,
+    "br/wbin.js.br": 85876,
+    "br/wbin._.js.br": 2618422,
+    "br/wsplit._.js.br": 1740441,
+    "br/wsplit.js.br": 152426,
+    "gz/bin.data.js.gz": 4636,
+    "gz/bin.data._.js.gz": 1091979,
+    "gz/wbin._.js.gz": 3717962,
+    "gz/wbin.js.gz": 104680,
+    "gz/wsplit.js.gz": 208191,
+    "gz/wsplit._.js.gz": 3200899,
+    "bin.data._.js": 3668934,
+    "bin.data.js": 14607,
+    "wbin._.js": 11692540,
+    "wbin.js": 556763,
+    "wsplit._.js": 14179429,
+    "wsplit.js": 570198
+  }
+}
